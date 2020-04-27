@@ -1,0 +1,580 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Britannic Bold";
+    src: url(../font/BRITANIC.TTF);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Britannic Bold","游ゴシック",sans-serif;
+}
+a,a:hover,a:visited {
+    color: #424242;
+    text-decoration: none;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/**********************************************
+header
+**********************************************/
+.btn {
+    display: none;
+}
+header h1 img {
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+header nav ul {
+    font-size: 0;
+}
+header nav ul li {
+    width: 150px;
+    height: 60px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-left: 1px solid #F5F5F5;
+    border-right: 1px solid #F5F5F5;
+    border-bottom: 1px solid #F5F5F5;
+}
+header nav ul li a {
+    display: block;
+}
+header nav ul li a div {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header nav ul li a div::before {
+    content: " ";
+    width: 148px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.3s;
+    z-index: -1;
+}
+header nav ul li a div p {
+    transition: color 0.2s;
+}
+header nav ul li a div p:nth-of-type(1) {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+header nav ul li a div p:nth-of-type(2) {
+    font-size: 10px;
+}
+.current div::before,
+header nav ul li a:hover div::before {
+    height: 60px;
+}
+.current div p,
+header nav ul li a:hover div p {
+    color: white;
+}
+
+/**********************************************
+subcontent
+**********************************************/
+.subcontent {
+    height: 300px;
+    background-color: #eee;
+    margin-top: -3px;
+}
+.subcontent ul {
+    font-size: 0;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.subcontent ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+.sub {
+    width: 270px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sub h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sub .arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.arrow span {
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 30%;
+}
+.subcontent ul li:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.subcontent ul li:hover .sub .arrow {
+    transform: rotate(-360deg);
+}
+/**********************************************
+focus
+**********************************************/
+.focus {
+    font-family: '游ゴシック';
+}
+.focus>div:nth-of-type(1) {
+    background-color: #81D4FA;
+    height: 800px;
+}
+.focus>div:nth-of-type(1)>div {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.focus>div:nth-of-type(1)>div>div {
+    width: 580px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+}
+.focus>div:nth-of-type(1)>div>div div {
+    height: 350px;
+    margin-top: -3px;
+    background-color: white;
+}
+.focus>div:nth-of-type(1)>div>div div h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 10px dotted #81D4FA;
+}
+.focus>div:nth-of-type(1)>div>div div p {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.focus>div:nth-of-type(1)>div>div:nth-of-type(2) div p:last-of-type {
+    font-size: 12px;
+    margin-left: 30px;
+}
+.focus>div:nth-of-type(2)>div {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.focus>div:nth-of-type(2)>div div {
+    width: 580px;
+}
+.focus>div:nth-of-type(2)>div div h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 10px dotted #81D4FA;
+}
+.focus>div:nth-of-type(2)>div div p {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.focus>div:nth-of-type(2)>div div p:last-of-type {
+    font-size: 15px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/**********************************************
+special
+**********************************************/
+.special>div {
+    height: 200px;
+    color: white;
+}
+.special>div>div {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.special>div>div>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.special>div>div>div:nth-of-type(1) {
+    width: 270px;
+    height: 100px;
+}
+.special>div>div>div:nth-of-type(2) {
+    width: 580px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 10px solid white;
+}
+.special>div>div>div:nth-of-type(3) {
+    width: 270px;
+    height: 100px;
+    cursor: pointer;
+}
+.special>div>div h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.special>div>div h3 span {
+    display: block;
+    line-height: 1.2em;
+}
+.special>div>div>div:nth-of-type(2) p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5em;
+}
+.special>div>div>div:nth-of-type(3) p {
+    font-size: 30px;
+    margin-right: 25px;
+}
+.special>div>div>div:nth-of-type(3) .arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.special>div>div>div:nth-of-type(3):hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.special>div>div>div:nth-of-type(3):hover .arrow {
+    transform: rotate(-360deg);
+}
+
+/**********************************************
+topics
+**********************************************/
+.topics>div {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topics>div>div {
+    width: 660px;
+    border-bottom: 10px dotted #81D4FA;
+}
+.topics>div>div h3 {
+    font-size: 45px;
+}
+.topics>div>div p {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+.topics>div ul {
+    margin-top: 70px;
+}
+.topics>div ul li {
+    width: 1200px;
+    margin-bottom: 45px;
+    border-bottom: 1px dashed #424242;
+    cursor: pointer;
+}
+.topics>div ul li>div {
+    width: 660px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.topics>div ul li .date {
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    background-color: #EF9A9A;
+}
+.date p {
+    font-size: 25px;
+    color: white;
+}
+.news p {
+    font-size: 28px;
+}
+
+/**********************************************
+sub_visual
+**********************************************/
+#sub_visual {
+    height: 300px;
+    background-image: url(../images/sub_visual.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/**********************************************
+pamphlet
+**********************************************/
+.pamphlet {
+    font-family: "游ゴシック";
+}
+.pamphlet>div {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.pamphlet>div>div:nth-of-type(1) {
+    width: 580px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 10px solid #FFE082;
+}
+.pamphlet>div>div:nth-of-type(1) h3 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pamphlet>div>div:nth-of-type(1) p {
+    font-size: 20px;
+}
+.pamphlet>div>div:nth-of-type(2) {
+    width: 580px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.pamphlet>div>div:nth-of-type(2)>div {
+    width: 270px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pamphlet>div>div:nth-of-type(2)>div h4 {
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid white;
+}
+.pamphlet>div>div:nth-of-type(2)>div>div {
+    width: 220px;
+    height: 80px;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(1)>div b {
+    font-size: 27px;
+    font-weight: bold;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(1)>div p {
+    font-size: 16px;
+    line-height: 1.3em;
+    margin-top: 10px;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(2)>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(2)>div p {
+    font-size: 16px;
+    line-height: 1.3em;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(2)>div .arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(2)>div .arrow span {
+    border-top: 4px solid #FFB74D;
+    border-right: 4px solid #FFB74D;
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(2):hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.pamphlet>div>div:nth-of-type(2)>div:nth-of-type(2)>div:hover .arrow {
+    transform: rotate(-360deg);
+}
+
+/**********************************************
+other
+**********************************************/
+.other {
+    color: white;
+    font-family: "游ゴシック";
+    background-color: #eee;
+}
+.other>div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.other>div>div {
+    width: 580px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.other>div>div>div:nth-of-type(1) {
+    width: 400px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.other>div>div>div:nth-of-type(1) h3 {
+    font-size: 24px;
+    padding-bottom: 5px;
+    width: 360px;
+    border-bottom: 4px solid white;
+}
+.other>div>div>div:nth-of-type(1) h3 span {
+    font-size: 30px;
+    font-weight: bold;
+}
+.other>div>div>div:nth-of-type(1) div {
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.other>div>div>div:nth-of-type(1) div p {
+    line-height: 1.2em;
+}
+.other>div>div>div:nth-of-type(2) {
+    width: 180px;
+    height: 150px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.other>div>div>div:nth-of-type(2) .arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.other>div>div>div:nth-of-type(2) .arrow span {
+    border-top: 4px solid white;
+    border-right: 4px solid white;
+}
+.other>div>div:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.other>div>div:hover>div:nth-of-type(2) .arrow {
+    transform: rotate(-360deg);
+}
+/**********************************************
+footer
+**********************************************/
+footer {
+    height: 300px;
+    color: white;
+    font-family: "游ゴシック";
+    background-color: #424242;
+}
+footer>div {
+    width: 580px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer>div>div {
+    width: 270px;
+    height: 200px;
+}
+footer>div>div:nth-of-type(1) {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+footer>div>div:nth-of-type(1) img {
+    height: 180px;
+}
+footer>div>div:nth-of-type(2) p {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+footer>div>div:nth-of-type(2) p:nth-of-type(2) {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+footer>div>div:nth-of-type(2) p:nth-of-type(3) {
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+footer small {
+    font-size: 12px;
+}
