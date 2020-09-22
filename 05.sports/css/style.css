@@ -21,7 +21,76 @@ b {
     font-weight: bold;
 }
 
-/******************left******************/
+/**************************************************
+loading
+**************************************************/
+div.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: loading2 1.6s forwards 1.6s;
+}
+
+div.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: white;
+}
+
+div.obj {
+    width: calc(100% / 8);
+    height: 100%;
+    position: relative;
+}
+
+div.obj::after {
+    content: '';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #006098;
+    animation: loading1 0.8s ease forwards calc(0.1s * (var(--i) - 1));
+}
+
+@keyframes loading1 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes loading2 {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+    50% {
+        width: 200px;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        /* z-index: 10; */
+    }
+}
+
+
+/**************************************************
+left
+**************************************************/
 .navigation {
     width: 200px;
     height: 100vh;
@@ -42,6 +111,14 @@ b {
     align-items: center;
     justify-content: center;
     background-color: white;
+}
+
+.logo a {
+    transition: all 0.3s;
+}
+
+.logo a:hover {
+    opacity: 0.8;
 }
 
 .navigation nav {
@@ -135,7 +212,9 @@ b {
     }
 }
 
-/******************right******************/
+/**************************************************
+right
+**************************************************/
 .main {
     width: calc(100% - 200px);
     float: right;
@@ -170,7 +249,9 @@ b {
     }
 }
 
-/*********top***********/
+/*************************************
+top
+*************************************/
 section.top {
     position: relative;
     width: 100%;
@@ -267,7 +348,9 @@ section.top>div:nth-of-type(2) p {
     }
 }
 
-/*********ticket***********/
+/*************************************
+ticket
+*************************************/
 section.ticket {
     width: 940px;
     height: 150px;
@@ -334,7 +417,9 @@ section.ticket>div:nth-of-type(2) p {
     }
 }
 
-/*********title***********/
+/*************************************
+title
+*************************************/
 .title {
     height: 50px;
     padding-top: 50px;
@@ -366,7 +451,9 @@ section.ticket>div:nth-of-type(2) p {
     }
 }
 
-/*********more***********/
+/*************************************
+more
+*************************************/
 .more {
     width: 300px;
     height: 50px;
@@ -414,7 +501,9 @@ section.ticket>div:nth-of-type(2) p {
     top: 13px;
 }
 
-/*********news***********/
+/*************************************
+news
+*************************************/
 .content {
     margin-left: 10px;
     margin-right: 10px;
@@ -483,7 +572,9 @@ section.news .content>div p {
     }
 }
 
-/*********schedule***********/
+/*************************************
+schedule
+*************************************/
 section.schedule .content {
     width: 220px;
     height: 200px;
@@ -521,7 +612,9 @@ section.schedule .wrapper>div:nth-of-type(2) {
     }
 }
 
-/*********fans***********/
+/*************************************
+fans
+*************************************/
 section.fans {
     margin-bottom: 50px;
 }
@@ -571,7 +664,9 @@ section.fans .content div p:nth-of-type(2) {
     }
 }
 
-/*********details***********/
+/*************************************
+details
+*************************************/
 section.details {
     width: 960px;
     height: 150px;
@@ -664,7 +759,9 @@ section.details div p:nth-of-type(2) {
     }
 }
 
-/*********sponsors***********/
+/*************************************
+sponsors
+*************************************/
 section.sponsors {
     margin-bottom: 0;
 }
@@ -849,7 +946,9 @@ section.sponsors>div.wrapper:nth-of-type(3) .content div {
     }
 }
 
-/*********footer***********/
+/*************************************
+footer
+*************************************/
 footer {
     background-color: #006098;
 }

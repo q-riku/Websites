@@ -1,3 +1,16 @@
+/****************************************************
+loading
+****************************************************/
+$(function () {
+    function loading() {
+        $(".loading").fadeOut(600);
+    }
+    setTimeout(loading,2500);
+});
+
+/****************************************************
+button
+****************************************************/
 $(function () {
     $(".btn").click(function () {
         $(this).toggleClass("change");
@@ -5,6 +18,10 @@ $(function () {
     });
 });
 
+
+/****************************************************
+modal
+****************************************************/
 $(function () {
     $("section>div>div a").click(function () {
         var contents = $($(this).attr("href")).html();
@@ -13,7 +30,6 @@ $(function () {
         $("#modal").append('<div class="box"></div>');
         $("#modal").append('<div class="closeMark"><span></span><span></span></div>');
         $(".box").append(contents);
-
 
         $("#modal").hide();
         $("#modal").fadeIn();

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 /****************************************************
 whole
@@ -12,13 +13,65 @@ body {
     min-width: 1100px;
     background-image: url(../images/bg/bg_pattern.png);
     background-attachment: fixed;
-    font-family: 'Noto Sans JP';
+    font-family: 'M PLUS Rounded 1c', sans-serif;;
 }
 
 a,
 a:visited {
     text-decoration: none;
 
+}
+
+/****************************************************
+loading
+****************************************************/
+div.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ed1e79;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+div.loading>div {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+div.obj {
+    width: 6px;
+    height: 0;
+    margin: 0 3px;
+    border-radius: 10px;
+    background-color: white;
+    animation: loading 0.8s infinite;
+}
+
+div.obj:nth-child(1) {animation-delay: 0s;}
+div.obj:nth-child(2) {animation-delay: 0.1s;}
+div.obj:nth-child(3) {animation-delay: 0.2s;}
+div.obj:nth-child(4) {animation-delay: 0.3s;}
+div.obj:nth-child(5) {animation-delay: 0.4s;}
+div.obj:nth-child(6) {animation-delay: 0.5s;}
+div.obj:nth-child(7) {animation-delay: 0.6s;}
+div.obj:nth-child(8) {animation-delay: 0.7s;}
+
+@keyframes loading {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 40px;
+    }
+    100% {
+        height: 0;
+    }
 }
 
 /****************************************************
@@ -46,6 +99,11 @@ h1 {
 h1 a {
     position: absolute;
     left: 20px;
+    transition: all 0.3s;
+}
+
+h1 a:hover {
+    opacity: 0.8;
 }
 
 /********** navigation **********/
@@ -71,7 +129,7 @@ nav ul:nth-of-type(1) li {
     font-size: 20px;
     font-weight: bold;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 30px;
     position: relative;
 }
 
@@ -206,8 +264,12 @@ main {
     justify-content: space-between;
 }
 
-.list section>div>div>a:hover {
+.list section>div>div>a {
     display: block;
+    transition: all 0.3s;
+}
+
+.list section>div>div>a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -299,9 +361,9 @@ footer {
 
 footer>div {
     width: 960px;
-    height: 170px;
+    height: 160px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,6 +379,11 @@ footer>div>div {
 footer>div>div a {
     position: absolute;
     left: 20px;
+    transition: all 0.3s;
+}
+
+footer>div>div a:hover {
+    opacity: 0.8;
 }
 
 footer>div>div ul {
@@ -331,7 +398,6 @@ footer>div>div ul li {
 footer>div>div ul p {
     color: white;
     font-size: 16px;
-    font-weight: bold;
 }
 
 footer>div>div ul p:before {
@@ -387,8 +453,8 @@ modal
 }
 
 .closeMark:hover {
-    border: 5px solid #ed1e79;
-    background-color: rgba(237, 30, 121, 0.3);
+    border: 8px solid #ed1e79;
+    background-color: rgba(237, 30, 121, 0.2);
 }
 
 .closeMark span {

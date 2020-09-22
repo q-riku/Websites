@@ -1,15 +1,17 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1p&display=swap');
+
 
 body {
-	font-family: 16px 'M PLUS 1p', sans-serif;
+	font-family: 16px 'Bebas Neue','M PLUS 1p', sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: black;
+	background-color: #333333;
 }
 
 a,a:hover {
 	text-decoration: none;
-	color: black;
+	color: #333333;
 }
 
 /******************** Left Part ********************/
@@ -38,7 +40,8 @@ header {
 /********** Navigation **********/
 /********************************/
 .navigation {
-	font-size: 20px;
+	font-family: 'Bebas Neue';
+	font-size: 30px;
 	text-align: left;
 }
 
@@ -59,8 +62,10 @@ header {
 .navigation li a:hover {
 	color: #f5f5f5;
 	background-color: #333333;
+	letter-spacing: 5px;
 }
 
+.navigation a.current::after,
 .navigation li a:hover::after {
 	content: '';
 	width: 10px;
@@ -120,7 +125,8 @@ header {
 	margin-left: 250px;
 	width: calc(100% -250px);
 	height: auto;
-	background-image: repeating-linear-gradient(45deg, rgba(51, 51, 51, 0.6) 0%, rgba(51, 51, 51, 0.6) 3%, rgba(245, 245, 245, 0.6) 3%, rgba(245, 245, 245, 0.6) 6%), repeating-linear-gradient(135deg, rgba(51, 51, 51, 0.6) 0%, rgba(51, 51, 51, 0.6) 3%, rgba(245, 245, 245, 0.6) 3%, rgba(245, 245, 245, 0.6) 6%);
+	background-image: repeating-linear-gradient(45deg, rgba(51, 51, 51, 0.4) 0%, rgba(51, 51, 51, 0.4) 3%, rgba(245, 245, 245, 0.4) 3%, rgba(245, 245, 245, 0.4) 6%), repeating-linear-gradient(135deg, rgba(51, 51, 51, 0.4) 0%, rgba(51, 51, 51, 0.4) 3%, rgba(245, 245, 245, 0.4) 3%, rgba(245, 245, 245, 0.4) 6%);
+	background-color: black;
 	background-attachment: fixed;
 }
 
@@ -154,6 +160,8 @@ header {
 }
 
 .title h1 {
+	font-family: 'Bebas Neue';
+	font-size: 40px;
 	text-align: center;
 	padding: 10px;
 	letter-spacing: 0.1em;
@@ -162,6 +170,7 @@ header {
 .article {
 	margin-top: 30px;
 	background-color: rgba(255, 255, 255, .6);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 /************ Footer ************/
@@ -294,18 +303,18 @@ section div {
 	margin: 0 50px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	border-bottom: 3px dashed black;
+	border-bottom: 3px dashed #333333;
 }
 
 .news_title {
 	padding: 0 20px 30px 20px;
-	border-left: 10px solid black;
+	border-left: 10px solid #333333;
 }
 
 .news_title .btn {
 	float: right;
 	padding: 2px 5px;
-	border: 2px solid black;
+	border: 2px solid #333333;
 	border-radius: 5px;
 }
 
@@ -317,7 +326,7 @@ section div {
 .news_area {
 	margin-top: 10px;
 	padding-top: 20px;
-	border-top: 1px dotted black;
+	border-top: 1px dotted #333333;
 }
 
 .news_area a {
@@ -378,7 +387,7 @@ section div {
 
 .disco table {
 	color: white;
-	border: 5px solid black;
+	border: 5px solid #333333;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -387,7 +396,7 @@ section div {
 }
 
 .disco .CD_detail {
-	border-top: 2px dashed black;
+	border-top: 2px dashed #333333;
 }
 
 .disco td p {
@@ -437,7 +446,7 @@ section div {
 
 .live a {
 	text-decoration: underline;
-	color: black;
+	color: #333333;
 }
 
 .live ul {
@@ -473,9 +482,9 @@ section div {
 
 .live_hall th.table_top {
 	font-size: 20px;
-	color: black;
+	color: #333333;
 	background-color: rgba(255, 255, 255, 0.6);
-	border: 3px solid black;
+	border: 3px solid #333333;
 }
 
 .live_hall a {
@@ -520,7 +529,7 @@ section div {
 .banner h2 {
 	padding: 10px;
 	color: white;
-	background-color: black;
+	background-color: #333333;
 	border-left: 5px solid white;
 }
 
